@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Mais Conectores</title>
+    <meta content="IE=edge" http-equiv="x-ua-compatible">
+    <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- Icons -->
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all" rel="stylesheet" type="text/css">
+    <!-- Styles -->
+    <link href="maisconectores/mc/css/keyframes.css" rel="stylesheet" type="text/css">
+    <link href="maisconectores/mc/css/materialize.min.css" rel="stylesheet" type="text/css">
+    <link href="maisconectores/mc/css/swiper.css" rel="stylesheet" type="text/css">
+    <link href="maisconectores/mc/css/swipebox.min.css" rel="stylesheet" type="text/css">
+    <link href="maisconectores/mc/css/style.css" rel="stylesheet" type="text/css">
+  </head>
+
+ <body>
+    <div class="m-scene" id="main"> <!-- Main Container -->
+      
+      <!-- Page Content -->
+      <div id="content" class="page">
+
+        <!-- Toolbar -->
+        <!-- Toolbar -->
+        <div id="toolbar" class="primary-color">
+          <a class="open-left" href="javascript:history.back()">
+            <i class="ion-android-arrow-back"></i>
+          </a>
+          <div class="title">Voltar</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="p-20 animated fadeinup">
+
+          <!-- Filters -->
+          <div class="controls">
+            <button id="ChangeLayout" class="left">List</button>
+            <button class="filter" data-filter="all">All</button>
+            <button class="filter" data-filter=".category-1">Conec.</button>
+            <button class="filter" data-filter=".category-2">Adap.</button>
+            <button class="filter" data-filter=".category-3">Cab.</button>
+          </div>
+
+
+          <div id="filter">
+            <!-- Swipeboox Contents -->
+            <section id="image-filter">
+              <div class="wrap small-width">
+                <div data-pswp-uid="1" id="demo-gallery" class="demo-gallery">
+                  <span></span>
+                </div>
+              </div>
+            </section> <!-- End of Swipebox Contents -->
+            
+          </div>
+          <!-- End of Main Contents -->
+          
+          <div class="clr"></div>
+
+           
+        </div> <!-- End of Page Content -->
+        
+        <!-- Footer -->
+          <footer class="page-footer primary-color">
+          <div class="container">
+            <div class="row">
+              <div class="col s12">
+                <p class="center-align grey-text text-lighten-4">maisconectores.com.br</p>
+                <div class="center-align">
+                  <i class="ion-social-facebook m-10 white-text"></i>
+                  <i class="ion-social-twitter m-10 white-text"></i>
+                  <i class="ion-social-pinterest m-10 white-text"></i>
+                  <i class="ion-social-dribbble m-10 white-text"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright blue darken-1">
+            <div class="container">
+            2011 Mais Conectores
+            </div>
+          </div>
+        </footer>
+
+      </div>
+    </div> <!-- End of Page Container -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+	$(document).ready(function(){
+		var dir = "maisconectores/mc/img/prd/"; // folder location
+		var fileextension = ".jpg"; // image format
+		var i = 1;
+		var category = 1;
+		$(function imageloop(){
+			if(category<=3){$('<img class="swipebox mix category-'+category+' no-smoothState"/>').attr('src', dir +category+' ('+ i +')'+ fileextension ).appendTo("span");}
+			if(i<=21 && category<=3){
+				i++;
+				if(category==3){
+				  if(i<=10){imageloop();} 
+				}else{
+				  imageloop();
+				}				
+			}else if(category<=3){
+				i=1;
+				category++;
+				imageloop();
+			}
+		});   
+	});
+	</script>
+    
+    <script src="maisconectores/mc/js/jquery-2.1.0.min.js"></script>
+    <script src="maisconectores/mc/js/jquery.swipebox.min.js"></script>   
+    <script src="maisconectores/mc/js/jquery.smoothState.min.js"></script> 
+    <script src="maisconectores/mc/js/materialize.min.js"></script> 
+    <script src="maisconectores/mc/js/swiper.min.js"></script>  
+    <script src="maisconectores/mc/js/jquery.mixitup.min.js"></script>
+    <script src="maisconectores/mc/js/masonry.min.js"></script>
+    <script src="maisconectores/mc/js/chart.min.js"></script>
+    <script src="maisconectores/mc/js/functions.js"></script>
+</body>
+</html>
